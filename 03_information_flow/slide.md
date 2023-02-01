@@ -11,8 +11,6 @@ presentation:
 
 <img src="https://labs.tadigital.com/wp-content/uploads/2020/03/logo.png">
 
-https://labs.tadigital.com/index.php/2020/03/31/unidirectional-data-flow-in-react/
-
 <!-- slide -->
 
 <h2><strong> ✅ Objectives </strong></h2>
@@ -63,7 +61,7 @@ From Step 4 of Thinking in React: To decide where state should live, for each pi
 
 <!-- slide style="text-align: left;" -->
 
-<h2 style="text-align: center;"><strong> First Task: Lifting the darkMode state up 🔧 </strong></h2>
+<h2 style="text-align: center;"><strong> Recap: Lifting the isDarkMode state up 🔧 </strong></h2>
 
 <br>
 
@@ -87,17 +85,7 @@ From Step 4 of Thinking in React: To decide where state should live, for each pi
 
 ❓ Why? This allows us to maintain the state and manage its value where the state is defined
 
-
 <!-- slide style="text-align: left;" -->
-
-<h2 style="text-align: center;"><strong> Diagram </strong></h2>
-
-<center><img src="https://res.cloudinary.com/dnocv6uwb/image/upload/v1645814361/react-inverse-data-flow-diagram_zpunjn.png" alt="Information flow diagram" height="1000" width="2000"></center>
-
-<!-- slide style="text-align: left;" -->
-
-<h2 style="text-align: center;"><strong> Recap </strong></h2>
-
 
 First, move the `isDarkMode` to the `App` component:
 
@@ -156,6 +144,6 @@ export default Header;
 
 Lifting state up allows us to share data across different components without having to redefine that state where it is needed. The lowest common parent component is the best place to create the state and the process of sharing the data is done through the passing of props.
 
-Because this data is now created elsewhere, we also have to be mindful of how the state is managed. Best practice is to always maintain and manage state where it has been defined. In order to do so successfully if behavior lives in a child component but state belongs to a parent component, is through inverse data flow. 
+Because this data is now created elsewhere, we also have to be mindful of how the state is managed. Best practice is to always maintain and manage state where it has been defined. If a behavior lives in a child component but state belongs to a parent component, we can employ inverse data flow. 
 
 This means creating a callback function in the parent component that will be responsible for updating the state and passing it down as a prop to the child component with the behavior.
