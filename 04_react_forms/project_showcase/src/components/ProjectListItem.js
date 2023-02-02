@@ -3,7 +3,7 @@ import { useState } from "react";
 const ProjectListItem = ({ id, about, image, link, name, phase }) => {
   const [clapCount, setClapCount] = useState(0);
 
-  const handleClap = () => setClapCount(clapCount + 1);
+  const handleClap = () => setClapCount(prevCount => prevCount + 1);
 
   return (
     <li className="card">

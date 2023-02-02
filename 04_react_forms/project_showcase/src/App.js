@@ -1,7 +1,19 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Header from "./components/Header";
 import ProjectForm from "./components/ProjectForm";
 import ProjectList from "./components/ProjectList";
+
+// Deliverable 2: Handle submitting the form and update state in parent 
+// using inverse data flow
+
+// - When the form is submitted:
+
+//   - Update the `projects` state located in the parent component, `App`
+//   using inverse data flow
+
+//     - Use the spread operator to return a new array with the new project included
+
+//     - Set the `projects` state to the new array value
 
 const App = () => {
   const [projects, setProjects] = useState([]);

@@ -262,5 +262,4 @@ const handleSubmit = (e) => {
 
 <br>
 
-State is a very integral part of the way that React applications operate and DOM manipulation to occur. React prefers using state to update the forms and keep track of the form fields values, making them controlled inputs. What our user sees in the input fields reflects the value of the state associated with that field. 
-
+State is an integral part of the way that React applications operate and allows DOM manipulation to occur. React prefers using state to update the forms and keep track of the form fields values, making them controlled inputs. What our user sees in the input fields reflects the value of the state associated with that field. 
